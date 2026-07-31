@@ -118,4 +118,4 @@ world.beforeEvents.worldInitialize.subscribe(({ blockComponentRegistry }) => {
             showTPMenu(player, block.location, block.dimension.id);
         }
     });
-});
+}); 
