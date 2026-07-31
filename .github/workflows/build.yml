@@ -1,0 +1,25 @@
+name: Build Void TP Machine Addon
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repositoriyi Çek
+        uses: actions/checkout@v4
+
+      - name: MCADDON Paketle
+        run: |
+          zip -r VoidTPMachine.mcaddon VoidTP_BP VoidTP_RP
+
+      - name: Artifact Olarak Yükle
+        uses: actions/upload-artifact@v4
+        with:
+          name: VoidTPMachine-mcaddon
+          path: VoidTPMachine.mcaddon
+          
