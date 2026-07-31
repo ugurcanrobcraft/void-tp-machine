@@ -10,7 +10,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Dynamic .mcaddon download endpoint
 app.get('/download', (req, res) => {
-    res.attachment('VoidTPMachine.mcaddon');
+    // Tarayıcıya dosyanın indirilebilir bir mcaddon olduğunu kesin olarak bildir
+    res.setHeader('Content-Type', 'application/octet-stream');
+    res.setHeader('Content-Disposition', 'attachment; filename="VoidTPMachine.mcaddon"');
     
     const archive = archiver('zip', { zlib: { level: 9 } });
 
@@ -29,6 +31,7 @@ app.get('/download', (req, res) => {
 
     archive.finalize();
 });
+
 
 // API status endpoint
 app.get('/api/status', (req, res) => {
