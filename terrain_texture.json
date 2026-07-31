@@ -1,0 +1,9 @@
+{
+  "resource_pack_name": "void_tp",
+  "texture_name": "atlas.terrain",
+  "texture_data": {
+    "void_tp_machine": {
+      "textures": "textures/blocks/tp_machine"
+    }
+  }
+}

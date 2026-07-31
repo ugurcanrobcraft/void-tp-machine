@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 10000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Dinamik .mcaddon indirme bağlantısı
+// Dynamic .mcaddon download endpoint
 app.get('/download', (req, res) => {
     res.attachment('VoidTPMachine.mcaddon');
     
@@ -30,7 +30,7 @@ app.get('/download', (req, res) => {
     archive.finalize();
 });
 
-// Durum kontrol API
+// API status endpoint
 app.get('/api/status', (req, res) => {
     res.json({
         status: "online",
@@ -41,6 +41,5 @@ app.get('/api/status', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Void TP Machine sunucusu ${PORT} portunda aktif!`);
+    console.log(`Void TP Machine server running on port ${PORT}`);
 });
-
