@@ -1,0 +1,13 @@
+{
+  "name": "void-tp-machine-server",
+  "version": "1.0.0",
+  "description": "Void TP Machine Minecraft Bedrock Addon Server for Render",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "archiver": "^7.0.1"
+  }
+}
