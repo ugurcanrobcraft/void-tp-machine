@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Void TP Machine - RP",
+    "description": "Geli\u015fmi\u015f I\u015f\u0131nlanma Makinesi Kaynak Paketi",
+    "uuid": "d4e5f6a7-b8c9-40d1-e234-56789abcdef0",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "e5f6a7b8-c9d0-41e2-f345-6789abcdef01",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}
